@@ -1,0 +1,24 @@
+library(testthat)
+
+source("~/Desktop/stat133/binomial/R/aux_kurtosis.R")
+
+context("Test for aux_kurtosis function")
+
+test_that("aux_kurtosis work as expected", {
+  t1 <- 4.6
+  p1 <- 0.1
+
+  expect_error(aux_kurtosis(t1, p1))
+
+  t2 <- 4
+  p2 <- 1.3
+
+  expect_error(aux_kurtosis(t2, p2))
+
+  t3 <- 10
+  p3 <- 0.3
+  expect_lt(abs(aux_kurtosis(t3, p3) - (-0.1238095)), 0.00000005)
+  expect_length(aux_kurtosis(t3, p3), 1)
+})
+
+test_file("~/Desktop/stat133/binomial/tests/testthat/test-aux_kurtosis.R")

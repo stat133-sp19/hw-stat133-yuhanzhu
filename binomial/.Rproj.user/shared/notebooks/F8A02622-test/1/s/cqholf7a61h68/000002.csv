@@ -1,0 +1,7 @@
+"0","# Calculate the tailedness measure (kurtosis) of the probability distribution"
+"0","bin_kurtosis(trials, prob)"
+"1","[1]"
+"1"," -0.1238095"
+"1","
+"
+"0","#> [1] -0.1238095"

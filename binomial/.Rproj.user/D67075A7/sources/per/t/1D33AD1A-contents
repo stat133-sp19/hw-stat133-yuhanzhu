@@ -1,0 +1,41 @@
+---
+title: "Introduction to Binomial"
+author: "Yuhan Zhu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(binomial)
+```
+ <font size="3"> 
+# Introduction to Binomial
+
+## Overview
+
+"binomial" is a R package that handles with the binomial probability model, mostly about its measures calculation and distribution visulization.
+
+## Main Function and Method
+
+1. **bin_choose()**  calculates the number of combinations in which k successes can occur in n trials.
+2. **bin_probability()** calculate the probability of k successes occurring in n trials.
+3. **bin_distribution()** get a data frame of the probability distribution(class **c("bindis", "data.frame")**); **plot.bindis()** illustrate a barplot of the binomial probability distribution.
+4. **bin_cumulative()** get a data frame with both the probability distribution and the cumulative probabilities (of class **c("bincum", "data.frame")**); **plot.bincum()** shows a point-line-plot of the bincum data frame.
+5. **bin_variable()** obtain a a binomial random variable object (of class **"binvar"**); **print.binvar()** nicely print the content of an object "binvar"; **summary.binvar()** obtain a full summary description of an object "binvar"(of class **"summary.binvar"**); **print.summary.binvar()** print the contents of an object "summary.binvar".
+6. **bin_mean()** calculate the mean value of a binomial distribution; **bin_variance()** calculate the variance value of a binomial distribution; **bin_mode()** calculate the mode of a binomial distribution; **bin_skewness()** calculate the skewness value of a binomial distribution; **bin_kurtosis** calculate the kurtosis of a binomial distributio.
+
+## Installation
+
+Install the binomial package (with vignettes) from GitHub:
+
+```{r}
+devtools::install_github("https://github.com/stat133-sp19/hw-stat133-yuhanzhu/binomial", build_vignettes = TRUE)
+```
+
+
+</font> 

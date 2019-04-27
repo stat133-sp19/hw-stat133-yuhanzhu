@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556322135999.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "714092484",
+    "id" : "3ABAF690",
+    "lastKnownWriteTime" : 1556322374,
+    "last_content_update" : 1556322374506,
+    "path" : "~/Desktop/stat133/binomial/tests/testthat/test-main_and_method_func.R",
+    "project_path" : "tests/testthat/test-main_and_method_func.R",
+    "properties" : {
+        "cursorPosition" : "72,9",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

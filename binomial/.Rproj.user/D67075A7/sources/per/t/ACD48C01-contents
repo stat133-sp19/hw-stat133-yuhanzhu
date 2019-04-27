@@ -1,0 +1,44 @@
+library(testthat)
+
+source("~/Desktop/stat133/binomial/R/bin_choose.R")
+source("~/Desktop/stat133/binomial/R/bin_probability.R")
+source("~/Desktop/stat133/binomial/R/bin_distribution.R")
+source("~/Desktop/stat133/binomial/R/plot.bindis.R")
+source("~/Desktop/stat133/binomial/R/bin_cumulative.R")
+source("~/Desktop/stat133/binomial/R/plot.bincum.R")
+source("~/Desktop/stat133/binomial/R/bin_variable.R")
+source("~/Desktop/stat133/binomial/R/print.binvar.R")
+source("~/Desktop/stat133/binomial/R/summary.binvar.R")
+source("~/Desktop/stat133/binomial/R/print.summary.binvar.R")
+source("~/Desktop/stat133/binomial/R/bin_mean.R")
+source("~/Desktop/stat133/binomial/R/bin_variance.R")
+source("~/Desktop/stat133/binomial/R/bin_mode.R")
+source("~/Desktop/stat133/binomial/R/bin_skewness.R")
+source("~/Desktop/stat133/binomial/R/bin_kurtosis.R")
+
+context("Test for main function and method of 'binomial'")
+
+test_that("binomial work as expected",{
+  trials <- 10
+  prob <- 0.3
+  success <- 0:1
+  expect_equal(bin_choose(trials, success), c(1, 10))
+  expect_length(bin_choose(trials, success), 2)
+  expect_equal(bin_probability(success, trials, prob), c(0.02824752, 0.12106082))
+  expect_equal(class(bin_distribution(trials, prob)), c("bindis", "data.frame"))
+  expect_equal(class(bin_cumulative(trials, prob)), c("bincum", "data.frame"))
+  expect_equal(class(bin_variable(trials, prob)), c("binvar"))
+  smbv <- bin_variable(trials, prob)
+  expect_equal(class(summary.binvar(smbv)), "summary.binvar")
+  expect_equal(bin_mean(trials, prob), 3)
+  expect_length(bin_mean(trials, prob), 1)
+  expect_equal(bin_variance(trials, prob), 2.1)
+  expect_length(bin_variance(trials, prob), 1)
+  expect_equal(bin_mode(trials, prob), 3)
+  expect_lt(abs(bin_skewness(trials, prob) -  0.2760262), 0.00000005)
+  expect_length(bin_skewness(trials, prob), 1)
+  expect_lt(abs(bin_kurtosis(trials, prob) - (-0.1238095)), 0.00000005)
+  expect_length(bin_kurtosis(trials, prob), 1)
+})
+
+test_file("~/Desktop/stat133/binomial/tests/testthat/test-check_success.R")

@@ -1,0 +1,27 @@
+"0","bv <- bin_variable(trials, prob)"
+"0","smbv <- summary(bv)"
+"0","smbv"
+"1","""Summary Binomial""
+
+Parameters
+- number of trials:  10 
+- prob of success :  0.3 
+
+Measures
+- mean    :  3 
+- variance:  2.1 
+- mode    :  3 
+- skewness:  0.276026223736942 
+- kurtosis:  -0.123809523809524"
+"0","#> ""Summary Binomial"""
+"0","#> "
+"0","#> Parameters"
+"0","#> - number of trials:  10 "
+"0","#> - prob of success :  0.3 "
+"0","#> "
+"0","#> Measures"
+"0","#> - mean    :  3 "
+"0","#> - variance:  2.1 "
+"0","#> - mode    :  3 "
+"0","#> - skewness:  0.276026223736942 "
+"0","#> - kurtosis:  -0.123809523809524"

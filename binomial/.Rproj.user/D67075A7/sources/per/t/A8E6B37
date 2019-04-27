@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556321742012.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "84008630",
+    "id" : "A8E6B37",
+    "lastKnownWriteTime" : 1556277222,
+    "last_content_update" : 1556277222,
+    "path" : "~/Desktop/binomial副本/tests/testthat/test-aux_kurtosis.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "21,2",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

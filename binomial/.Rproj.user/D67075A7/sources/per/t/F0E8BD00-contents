@@ -1,0 +1,29 @@
+library(testthat)
+
+source("~/Desktop/stat133/binomial/R/bin_cumulative.R")
+
+context("Test for bin_cumulative function")
+
+test_that("bin_cumulative work as expected",{
+  n1 <- 3
+  p1 <- 1.1
+  expect_error(bin_cumulative(n1, p1))
+
+  n2 <- 3.1
+  p2 <- 1
+  expect_error(bin_cumulative(n2, p2))
+
+  n3 <- 5
+  p3 <- 0.5
+  success <- 0:5
+  cdf3 <- as.data.frame(success)
+  cdf3$probability <- c(0.03125, 0.15625, 0.31250, 0.31250, 0.15625, 0.03125)
+  cdf3$cumulative <- c(0.03125,  0.18750, 0.50000, 0.81250, 0.96875, 1.00000)
+  class(cdf3) <- c("bincum", "data.frame")
+  expect_equal(class(bin_cumulative(n3, p3)), c("bincum", "data.frame"))
+  expect_equal(bin_cumulative(n3, p3), cdf3)
+})
+
+test_file("~/Desktop/stat133/binomial/tests/testthat/test-bin_cumulative.R")
+
+

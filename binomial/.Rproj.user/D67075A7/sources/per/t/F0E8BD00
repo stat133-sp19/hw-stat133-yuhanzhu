@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556322350086.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "577874943",
+    "id" : "F0E8BD00",
+    "lastKnownWriteTime" : 1556293431,
+    "last_content_update" : 1556293431,
+    "path" : "~/Desktop/binomial副本/tests/testthat/test-bin_cumulative.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "24,2",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

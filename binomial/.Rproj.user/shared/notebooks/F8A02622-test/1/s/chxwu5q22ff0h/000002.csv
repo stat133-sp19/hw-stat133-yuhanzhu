@@ -1,0 +1,7 @@
+"0","# Calculate the asymmetry measure (skewnesss) of the probability distribution"
+"0","bin_skewness(trials, prob)"
+"1","[1]"
+"1"," 0.2760262"
+"1","
+"
+"0","#> [1] 0.2760262"

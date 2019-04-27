@@ -1,0 +1,21 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 221,
+                "editor_state" : 2,
+                "function_name" : "bin_variable",
+                "function_steps" : "2",
+                "id" : 0,
+                "is_package_breakpoint" : true,
+                "is_pending_debug_completion" : false,
+                "line_number" : 221,
+                "needs_updated_steps" : false,
+                "package_name" : "binomial",
+                "path" : "~/Desktop/stat133/binomial/R/binomial.R",
+                "state" : 2,
+                "type" : 0
+            }
+        ]
+    }
+}

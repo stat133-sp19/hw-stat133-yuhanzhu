@@ -1,0 +1,118 @@
+---
+title: Introduction to Binomial
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{test}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE,comment = "#>")
+```
+
+ <font size="3"> 
+ 
+## Overview
+
+"binomial" is a R package that handles with the binomial probability model, mostly about its measures calculation and distribution visulization.
+
+## Main Function and Method
+
+1. **bin_choose()**  calculates the number of combinations in which k successes can occur in n trials.
+2. **bin_probability()** calculate the probability of k successes occurring in n trials.
+3. **bin_distribution()** get a data frame of the probability distribution(class **c("bindis", "data.frame")**); **plot.bindis()** illustrate a barplot of the binomial probability distribution.
+4. **bin_cumulative()** get a data frame with both the probability distribution and the cumulative probabilities (of class **c("bincum", "data.frame")**); **plot.bincum()** shows a point-line-plot of the bincum data frame.
+5. **bin_variable()** obtain a a binomial random variable object (of class **"binvar"**); **print.binvar()** nicely print the content of an object "binvar"; **summary.binvar()** obtain a full summary description of an object "binvar"(of class **"summary.binvar"**); **print.summary.binvar()** print the contents of an object "summary.binvar".
+6. **bin_mean()** calculate the mean value of a binomial distribution; **bin_variance()** calculate the variance value of a binomial distribution; **bin_mode()** calculate the mode of a binomial distribution; **bin_skewness()** calculate the skewness value of a binomial distribution; **bin_kurtosis** calculate the kurtosis of a binomial distributio.
+
+
+## Usage Examples 1: Measures Calculations 
+
+Fisrtly,  we can obtain the commonly used measures values of binomial distribution in a very easy way. The package provides with corresponding functions like **bin_mean**, **bin_variance**, **bin_mode**, **bin_kurtosis** and **bin_skewness**.
+
+```{r}
+library(binomial)
+trials <- 10
+prob <- 0.3
+success <- 0:1
+# Calculate the expected value (mean) of a binomial distribution
+bin_mean(trials, prob)
+#> [1] 3
+```
+
+
+```{r}
+# Calculate the variance value of a binomial distribution
+bin_variance(trials, prob)
+#> [1] 2.1
+```
+
+
+```{r}
+# Calculate the most likely number of success (mode) in n independent trials with probability p
+bin_mode(trials, prob)
+#> [1] 3
+```
+
+
+```{r}
+# Calculate the asymmetry measure (skewnesss) of the probability distribution
+bin_skewness(trials, prob)
+#> [1] 0.2760262
+```
+
+
+```{r}
+# Calculate the tailedness measure (kurtosis) of the probability distribution
+bin_kurtosis(trials, prob)
+#> [1] -0.1238095
+```
+
+Further, we are able to get a direct and organized summary of the measures above.
+
+```{r}
+bv <- bin_variable(trials, prob)
+smbv <- summary(bv)
+smbv
+#> "Summary Binomial"
+#> 
+#> Parameters
+#> - number of trials:  10 
+#> - prob of success :  0.3 
+#> 
+#> Measures
+#> - mean    :  3 
+#> - variance:  2.1 
+#> - mode    :  3 
+#> - skewness:  0.276026223736942 
+#> - kurtosis:  -0.123809523809524
+```
+
+## Usage Examples 2: Distribution Visualization
+In more occasions, we also want to generate plots to vividly show the binomial distribution. The **plot.bindis()** and **plot.bincum()** can help to draw the probability distribution and cumulative plots.
+
+```{r}
+library(ggplot2)
+trials <- 5
+prob <- 0.5
+success <- 2:3
+# generates a "bindis" object based on the given conditions
+bd <- bin_distribution(trials, prob)
+class(bd)
+#> [1] "bindis"     "data.frame"
+# draw the probability distribution barplot
+plot(bd)
+```
+
+
+```{r}
+# generates a "bincum" object based on the given conditions
+bc <- bin_cumulative(trials, prob)
+class(bc)
+#> [1] "bincum"     "data.frame"
+# draw the cumulative distribution line-point-plot
+plot(bc)
+```
+
+</font> 

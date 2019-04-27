@@ -1,0 +1,7 @@
+"0","# Calculate the variance value of a binomial distribution"
+"0","bin_variance(trials, prob)"
+"1","[1]"
+"1"," 2.1"
+"1","
+"
+"0","#> [1] 2.1"
